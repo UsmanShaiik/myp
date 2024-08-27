@@ -1,0 +1,54 @@
+.testimonials-section {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Consistent font family */
+  }
+  
+  .testimonials-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem; /* Consistent font size */
+    font-weight: bold; /* Consistent font weight */
+  }
+  
+  .education-projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .education, .projects {
+    flex: 1;
+    margin: 0 10px;
+    max-width: 45%;
+    box-sizing: border-box;
+  }
+  
+  .education h3, .projects h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem; /* Consistent font size for section titles */
+    font-weight: bold; /* Consistent font weight */
+  }
+  
+  .education ul, .projects ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .education li, .projects li {
+    margin-bottom: 10px;
+    font-size: 1rem; /* Consistent font size for list items */
+    line-height: 1.5; /* Consistent line height */
+  }
+  .education li strong {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase; /* Transform text to uppercase */
+  }
+  .education strong, .projects strong {
+    display: block;
+    font-weight: bold; /* Consistent font weight */
+  }
+  .projects {
+    margin-top: 30px; /* Adjust this value as needed */
+}

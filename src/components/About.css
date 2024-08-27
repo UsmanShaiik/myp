@@ -1,0 +1,68 @@
+.about-section {
+    padding: 40px 20px;
+    background: #f4f4f4;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .personal-info,
+  .about-me,
+  .profile {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  .personal-info p,
+  .about-me p,
+  .profile p {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  .profile p strong {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .skills {
+    margin-top: 30px;
+  }
+  
+  .skills h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .skill {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .skill h4 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+  
+  .skill-bar {
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+  }
+  
+  .progress {
+    background: #3498db;
+    height: 100%;
+    width: var(--skill-level);
+    transition: width 0.3s ease;
+  }
+  

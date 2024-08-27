@@ -1,0 +1,675 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInUp 1s 0.5s forwards;
+}
+
+.hero-section .btn-primary {
+  background: #fff;
+  color: #3498db;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInUp 1s 1s forwards;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+  background: #3498db;
+  color: #fff;
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 0;
+  background: #fff;
+  animation: fadeInUp 1s ease-out;
+}
+
+.about-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.skill-bar {
+  width: 90%;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.skill-bar .progress {
+  height: 10px;
+  background: #3498db;
+  border-radius: 5px;
+  animation: skillAnimation 2s forwards;
+}
+
+@keyframes skillAnimation {
+  from { width: 0%; }
+  to { width: var(--skill-level); }
+}
+
+/* Resume Section */
+.resume-section {
+  padding: 60px 0;
+  background: #f9f9f9;
+  animation: fadeIn 1s ease-out;
+}
+
+.resume-section .job-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-section .job-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 60px 0;
+  background: #fff;
+  animation: fadeIn 1s ease-out;
+}
+
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.projects-section .project-item {
+  width: calc(33.333% - 40px);
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-section .project-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+.contact-section label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 17px;
+  border: 1px solid #ddd;
+}
+
+.contact-section button {
+  background: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+  background: #2980b9;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* About Me Section Styles */
+.about-me-section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.about-me-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-me-section p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* Testimonials Section Styles */
+.testimonials-section {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px;
+  text-align: center;
+}
+
+.testimonial-item h4 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Service Section Styles */
+.service-section {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.service-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(33.333% - 40px);
+  margin: 20px;
+  text-align: center;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.service-item h3 {
+  margin-top: 20px;
+}
+
+.service-item p {
+  margin: 10px 0 20px;
+}
+
+/* 3D Flip Effect */
+.service-item-flip {
+  perspective: 1000px;
+  width: calc(33.333% - 40px);
+  margin: 20px;
+}
+
+.service-item-flip .flip-card {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.service-item-flip .flip-card:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+  background: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  background: #fff;
+  color: #333;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+/* Portfolio Item Hover Effects */
+.portfolio-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Media Links */
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-media-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-media-links a:hover {
+  color: #3498db;
+}
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Gradient Backgrounds */
+.about-section, .contact-section, .resume-section, .projects-section, .hero-section, .portfolio-section, .service-section {
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Example gradient */
+  padding: 50px 20px;
+}
+
+/* Navbar Centering */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5); 
+}
+
+.nav-menu a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-menu a:hover {
+  background-color: none;
+}
+
+/* Skills Progress Bar */
+.skill-bar {
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  margin: 10px 0;
+  height: 20px;
+  position: relative;
+}
+/* Navbar.css */
+.navbar {
+  position: relative;
+  /* Other styling for the navbar */
+}
+
+.nav-toggle-btn {
+
+  /* Styling for the toggle button */
+}
+
+/* Navbar menu */
+.nav-menu {
+  display: flex;
+  /* Other styling for the navbar menu */
+}
+
+/* Navbar links */
+.nav-menu a {
+  position: relative; /* Required for positioning the tooltip */
+  color:none;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.nav-menu a::after {
+  content: attr(data-tooltip); /* Use data-tooltip attribute for the text */
+  position: absolute;
+  bottom: 100%; /* Place above the link */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap; /* Prevent text wrapping */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.nav-menu a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.progress {
+  height: 100%;
+  border-radius: 25px;
+  background-color: #76c7c0; /* Progress bar color */
+  width: var(--skill-level);
+}
+
+/* Notification Icon */
+.notification-icon {
+  position: absolute;
+  margin-top: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #9e0000;
+}
+
+.notification-popup {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.notification-popup.active {
+  display: block;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.footer a {
+  color: #76c7c0;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+/* Adjusting the transition duration to make it slower and smoother */
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-out, transform 2s ease-out; /* Increase to 2 seconds */
+}
+
+/* Fade-in animation */
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Footer container styling */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Footer list styling */
+.footer-list,
+.social-list {
+  list-style: none; /* Removes default bullets */
+  padding: 0;       /* Removes default padding */
+  margin: 0;        /* Removes default margin */
+}
+
+.footer-list li,
+.social-list li {
+  margin-bottom: 10px;
+}
+
+/* Social links styling */
+.footer-link,
+.social-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-link:hover,
+.social-link:hover {
+  text-decoration: underline; /* Adds underline on hover for better visibility */
+}
+
+/* Headings in the footer */
+.footer-list h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Aligns items in the footer */
+.footer .container ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer .container ul li {
+  margin-bottom: 10px;
+}
+
+/* Styling for social media list */
+.social-list {
+  display: flex;
+  gap: 15px;
+}
+
+/* Responsive design: stacks items on smaller screens */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.notification-icon {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px; /* Adjust this based on your layout */
+}
+
+.notification-icon i {
+  font-size: 24px;
+  cursor: pointer;
+  color: #beacac; /* Adjust the color */
+}
+
+.notification-icon i:hover {
+  color: #764d4d; /* Change the color on hover */
+}
+
+.notification-popup {
+  position: absolute;
+  top: 30px; /* Position below the icon */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.notification-popup.active {
+  display: block; /* Show when active */
+}
+
+.notification-popup p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.notification-popup p:last-child {
+  margin-bottom: 0;
+}

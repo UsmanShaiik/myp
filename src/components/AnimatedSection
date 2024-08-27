@@ -1,0 +1,36 @@
+import React, { useEffect, useRef } from 'react';
+
+const useScrollAnimation = () => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = ref.current;
+      const rect = element.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        element.classList.add('animate');
+      } else {
+        element.classList.remove('animate');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check on mount
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return ref;
+};
+
+const AnimatedSection = () => {
+  const ref = useScrollAnimation();
+
+  return (
+    <section ref={ref} className="animated-section">
+      {/* Content */}
+    </section>
+  );
+};
+
+export default AnimatedSection;
