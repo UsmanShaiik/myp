@@ -7,6 +7,117 @@ body {
   background-color: #f5f5f5;
   overflow-x: hidden;
 }
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  /* Adjusting Hero Section */
+  .hero-section h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .hero-section p {
+    font-size: 1rem; /* Smaller paragraph font */
+  }
+
+  .hero-section .btn-primary {
+    padding: 10px 20px;
+    font-size: 1rem; /* Smaller button font */
+  }
+
+  /* Adjusting About Section */
+  .about-section h2,
+  .about-section h3 {
+    font-size: 1.5rem; /* Smaller headings */
+  }
+
+  .personal-info,
+  .profile,
+  .skills {
+    padding: 10px 0;
+    font-size: 1rem; /* Smaller text */
+  }
+
+  .skill-bar,
+  .progress {
+    height: 15px; /* Thinner progress bars */
+  }
+
+  /* Adjusting Contact Section */
+  .contact-section h2 {
+    font-size: 1.5rem; /* Smaller heading */
+  }
+
+  .contact-section form {
+    flex-direction: column; /* Stacked form elements */
+  }
+
+  .contact-section label {
+    font-size: 1rem;
+    margin-bottom: 5px; /* Spacing adjustment */
+  }
+
+  .contact-section input,
+  .contact-section textarea {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px; /* Adjusted spacing */
+  }
+
+  .contact-section .btn-primary {
+    padding: 10px;
+    font-size: 1rem; /* Smaller button size */
+  }
+
+  /* Adjusting Footer */
+  .footer {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .footer p,
+  .footer .footer-link {
+    font-size: 1rem; /* Smaller footer text */
+  }
+
+  /* Adjusting Navbar */
+  .navbar .nav-menu {
+    display: none; /* Hide menu by default on mobile */
+  }
+
+  .navbar .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Stacked menu items */
+  }
+
+  .navbar .nav-menu a {
+    padding: 10px;
+    font-size: 1rem; /* Smaller menu items */
+    text-align: center;
+    width: 100%; /* Full-width links */
+  }
+
+  /* Adjusting Portfolio Section */
+  .portfolio-section h2 {
+    font-size: 1.5rem; /* Smaller heading */
+  }
+
+  .portfolio-slider {
+    flex-direction: column;
+    align-items: center; /* Centered items */
+  }
+
+  .portfolio-item {
+    text-align: center;
+  }
+
+  .portfolio-item h3 {
+    font-size: 1.25rem; /* Smaller portfolio item headings */
+  }
+
+  .portfolio-item p {
+    font-size: 1rem; /* Smaller text */
+  }
+}
 
 /* Container */
 .container {
